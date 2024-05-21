@@ -1,6 +1,5 @@
 <template>
   <div class="main-container">
-    <Navbar />
     <v-container v-if="currentView === 'home'" class="home-container">
       <CustomCarousel />
 
@@ -45,7 +44,7 @@
 
       <v-row justify="center" class="mt-5">
         <v-col cols="12">
-          <v-img src="/imagenes/Path.jpg"></v-img>
+          <v-img src="/imagenes/Path.jpg" alt="Path"></v-img>
         </v-col>
       </v-row>
     </v-container>
@@ -55,20 +54,15 @@
       :product="selectedProduct" 
       @change-view="currentView = $event"
     />
-
-    <Footer v-if="currentView === 'home'" />
   </div>
 </template>
 
 <script>
-import Navbar from '~/components/Navbar.vue';
-import Footer from '~/components/Footer.vue';
 import CustomCarousel from '~/components/CustomCarousel.vue';
 import OrderPage from '~/components/OrderPage.vue';
+
 export default {
   components: {
-    Navbar,
-    Footer,
     CustomCarousel,
     OrderPage
   },
