@@ -1,24 +1,24 @@
 <template>
-    <v-app-bar app dark color="#F55A76">
-      <v-text-field  background-color="#fff" v-model="search" label="Buscar..." hide-details solo-inverted></v-text-field>
-      <v-btn color="#F99AAA" dark>Buscar</v-btn>
-    </v-app-bar>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        search: '',
-      }
-    }
-  }
-  </script>
-  
-  <style scoped>
-  .v-text-field {
-    background-color: #fff;
-    width: 30px;
-  }
+  <v-app-bar app dark color="primary" height="75">
+    <v-text-field
+      v-model="search"
+      placeholder="Buscar"
+      hide-details
+      filled
+      rounded
+      class="rounded-0"
+      prepend-inner-icon="mdi-magnify"
+    ></v-text-field>
+    <v-btn height="56px" elevation="0" color="#F99AAA" dark>Buscar</v-btn>
+  </v-app-bar>
+</template>
 
-  </style>
+<script>
+export default {
+  data() {
+    return {
+      search: "",
+    };
+  },
+};
+</script>
